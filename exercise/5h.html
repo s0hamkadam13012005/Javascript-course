@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart quantity</title>
+</head>
+<body>
+    
+    <button
+    onclick="
+         console.log(`Cart quantity:  ${CartQuantity}`) ">Show quantity</button>
+
+    <button
+    onclick="
+   // CartQuantity = CartQuantity+1; >>>>> shorcut below
+        CartQuantity++;
+         console.log(`Cart quantity: ${CartQuantity}`) ">Add to Cart</button>
+
+    <button
+    onclick="
+   // CartQuantity = CartQuantity+2;  i am using below the shortcut for This
+   CartQuantity+=2
+    console.log(`Cart quantity: ${CartQuantity}`)"
+    >+2</button>
+
+    <button
+    onclick="
+    CartQuantity = CartQuantity+3;
+    console.log(`Cart quantity: ${CartQuantity}`)">+3</button>
+
+    
+<button
+onclick="
+CartQuantity += 4;
+console.log(`Cart quantity: ${CartQuantity}`)">+4</button>
+
+
+
+<button
+onclick="
+CartQuantity += 5;
+console.log(`Cart quantity: ${CartQuantity}`)">+5</button>
+
+
+<button
+onclick="
+CartQuantity --;
+console.log(`Cart quantity: ${CartQuantity}`)">remove</button>
+
+<button
+onclick="
+CartQuantity -=2;
+console.log(`Cart quantity: ${CartQuantity}`)">-2</button>
+
+
+<button
+onclick="
+CartQuantity -=3;
+console.log(`Cart quantity: ${CartQuantity}`)">-3</button>
+
+
+
+
+
+<button
+onclick="
+CartQuantity = 0;
+console.log('Cart was reset')
+console.log(`Cart quantity: ${CartQuantity}`)">
+    reset the cart
+</button>
+</body>
+
+<script>
+     let CartQuantity = 0;
+</script>
+
+
+</html>
