@@ -14,20 +14,44 @@
     <button
     onclick="
    // CartQuantity = CartQuantity+1; >>>>> shorcut below
-        CartQuantity++;
-         console.log(`Cart quantity: ${CartQuantity}`) ">Add to Cart</button>
+       
+         if(CartQuantity+1>10)
+         {
+            alert('Ccart is Full & dont update the quantity ')
+         }
+         else{
+            CartQuantity++;
+         console.log(`Cart quantity: ${CartQuantity}`) ;
+         
+         }">Add to Cart</button>
 
     <button
     onclick="
    // CartQuantity = CartQuantity+2;  i am using below the shortcut for This
-   CartQuantity+=2
-    console.log(`Cart quantity: ${CartQuantity}`)"
+  
+   if(CartQuantity+2>10)
+         {
+            alert('Cart is Full & dont update the quantity ')
+         }
+         else{
+            CartQuantity+= 2;
+         console.log(`Cart quantity: ${CartQuantity}`) ;
+         
+         }"
     >+2</button>
 
     <button
     onclick="
-    CartQuantity = CartQuantity+3;
-    console.log(`Cart quantity: ${CartQuantity}`)">+3</button>
+   
+   if(CartQuantity+3>10)
+         {
+            alert('Ccart is Full & dont update the quantity ')
+         }
+         else{
+            CartQuantity+= 3;
+         console.log(`Cart quantity: ${CartQuantity}`) ;
+         
+         }">+3</button>
 
 
 <button
@@ -37,6 +61,46 @@ console.log('Cart was reset')
 console.log(`Cart quantity: ${CartQuantity}`)">
     reset the cart
 </button>
+
+
+   <!-- vvv This code was changed. vvv -->
+   <button onclick="
+   if(CartQuantity<=0){
+    alert('Not enough items in the cart')
+}else{
+    CartQuantity--;
+   console.log(`Cart quantity: ${CartQuantity}`);
+}
+   ">Remove from cart</button>
+
+ <button onclick="
+if(CartQuantity<=0){
+    alert('Not enough items in the cart')
+}else{
+    CartQuantity -= 2;
+   console.log(`Cart quantity: ${CartQuantity}`);
+}
+
+
+   
+ ">-2</button>
+
+ <button onclick="
+  if(CartQuantity<=0){
+    alert('Not enough items in the cart')
+}else{
+    CartQuantity -= 3;
+   console.log(`Cart quantity: ${CartQuantity}`);
+}
+ ">-3</button>
+ <!-- ^^^ This code was changed. ^^^ -->
+
+ <button onclick="
+   CartQuantity = 0;
+   console.log('Cart was reset.');
+   console.log(`Cart quantity: ${CartQuantity}`);
+ ">Reset Cart</button>
+
 </body>
 
 <script>
